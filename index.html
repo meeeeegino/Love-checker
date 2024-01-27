@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Love Calucter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+*{
+    padding:0px; margin:0px;
+}
+#hd_bar{
+    height:58px;width:100%; background:red; color:white;
+    position: fixed;
+}
+
+#pdp1{
+    height:100vh;width:100%;
+    background-size:cover;
+   transition:1s; background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI1bi9oywGz66V8uhkMN51qh9Wmrkw8nkWqw&usqp=CAU');
+}
+.nn{
+    height:40px;width:80%;border:1px solid red;
+    border-radius:10px;
+}
+#op_menu{
+    height:55px;float:left;
+}
+.menu_btn_c{
+   border-radius:50%;margin:5px 10px;border:0;background:0; color:white;font-size:25px;
+    height:50px;width:50px;float:left;
+}
+.menu_btn_c:hover{
+    background:#FF5050;
+}
+
+#home_page{
+    overflow:hidden;float:left; transition:1s; position:fixed;
+}
+
+
+
+#love_page{
+    float:left;
+}
+
+.bth_m{
+    height:50px;width:80%;margin:10px;
+border-radius:5px; border-color: white; border-top-left-radius: 25px;
+font-size:18px;
+border-bottom-right-radius: 25px;
+}
+
+.fa-heart{
+    animation:h_beat 2s infinite;
+}
+@keyframes h_beat{
+    10%{
+        font-size:100px;
+    }
+     50%{
+        font-size:70px;
+    }
+     100%{
+        font-size:100px;
+    }
+}
+#menu_bar{
+   overflow:hidden; transition:1s; height:100vh;width:0px;background:white;position:fixed;margin:58px 0px;box-shadow:0px 0px 10px grey;
+}
+#menu_bar a{
+    text-decoration:none; color:black;
+}
+#skname{
+    float:right;margin-right:15px
+}
+#link_btn{
+    height:40px;width:100%;
+}
+
+#menu_bar a font{
+    margin:30px 20px;font-size:20px;
+}
+#back_btn{
+    height:50px;width:50px;border-radius:50%;border:0;float:right;margin-right:20px;margin-top:50px;font-size:25px;
+    
+}
+</style>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+<div id="home_page" onclick="cl_mmk()" style="height:100vh;width:100%;
+background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmpMzUA8AZw6hHiHMxFvJXvxWUPVFFjGrXlg&usqp=CAU');
+">
+
+<center>
+</br></br> </br></br>
+<div style="height:60px;"> </div>
+
+ <button class="bth_m" onclick="love()">Love</button>
+ <button class="bth_m" onclick="friend()" >Friendship</button>
+ 
+<button class="bth_m" onclick="marid()" >Marriage</button>
+
+</br></br>
+
+
+
+</div>
+
+
+
+
+
+<div id="pdp1" onclick="cl_lokt()" style="overflow:hidden;width:100%;float:left;">
+<div id="hd_bar"> 
+<button id="op_menu" onclick="op_menu()" class="menu_btn_c"><b>&#9776</b></button>
+
+
+<button id="cl_menu" onclick="cl_menu()" style="display:none;" class="menu_btn_c"><b>&times</b></button>
+<h2 style="margin:15px 5px;float:left;">Love calculator</h2>
+</div>
+</br></br></br></br></br>
+</br>
+
+
+
+<center>
+
+<img style ="border-radius:50%; width:100px;"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMaH5nrA-dNhMPbrTf2j06qyGSYQrCiR3K1g&usqp=CAU"/>
+
+</br></br>
+<h5 id="current_l">Loves</h5>
+
+</br>
+
+
+<input type="text" id="yname" placeholder="   Your name" class="nn"/>
+</br></br>
+<input required type="text" id="pname" placeholder="    Partner name" class="nn"/>
+</br></br>
+<button   class="nn" style ="background:red; color: white;" onclick="callcu()"><b>Calculator</b></button>
+
+</br></br></br>
+
+<button id="back_btn" onclick="back()"><li class="fa fa-reply"></li></button>
+</div>
+
+
+
+<div id="menu_bar">
+
+
+<img style="width:100%;"src="https://cdn.openart.ai/stable_diffusion/231959cd637d324f421cec16eae4afa77b2f5687_2000x2000.webp"/>
+</br></br>
+<a href="#"><div id="link_btn"><font>
+<li class="fa fa-share-alt"></li> &nbsp
+Share App</font></div></a>
+
+
+<a href="#"><div id="link_btn">
+
+
+<font>
+<li class="fa fa-star"></li> &nbsp Rate us</font></div></a>
+
+
+
+<a href="#"><div id="link_btn"><font>
+<li class="	fa fa-unlock-alt"></li> &nbsp
+Privacy policy</font></div></a>
+
+<a href="https://api.whatsapp.com/send/?phone=918377043632&text&type=phone_number&app_absent=0"><div id="link_btn"><font>
+<li class="fa fa-whatsapp"></li> &nbsp
+WhatsApp</font></div></a>
+
+<a href="https://meeeeegino.github.io/webcreate/"><div id="link_btn"><font>
+<li class="fa  fa-info-circle"></li> &nbsp
+About us</font></div></a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="love_page" onclick="lovep1()" style="
+
+
+ overflow:hidden; transition:1s;
+float:right;
+height:100vh;width:0%;
+background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmpMzUA8AZw6hHiHMxFvJXvxWUPVFFjGrXlg&usqp=CAU');
+">
+<center>
+</br></br> </br></br>
+<div style="height:60px;"> </div>
+
+<h1 id="fname" style="float:left;margin-left:15px">Name</h1>
+</br></br>
+<li class="fa fa-heart" style="font-size:100px;color:red;text-shadow:0px 0px 50px white;"></li>
+<br>
+
+
+<h1 id="skname">Name2</h1>
+</br></br>
+<h1 id="nck">100%</h1>
+</br>
+
+</br></br>
+
+<h2 id="ttr" style="color:red;text-shadow:0px 0px 10px white;">Trust Love</h2>
+</br>
+<div   id="you_tts" style=" height:50px;width:90%; background:0; ">
+
+No entry
+
+</div>
+
+<button id="back_btn" onclick="back()"><li class="fa fa-reply"></li></button>
+<div style="height:0px;width:0px;overflow:hidden;"><input type="text" id="b2" value=""/></div>
+
+</div>
+<script>
+
+
+
+
+
+
+
+
+
+function love(){
+    document.getElementById("current_l").innerHTML="Love";
+    
+    
+    document.getElementById("home_page").style.width="0%"
+    
+    document.getElementById("love_page").style.width="0%"
+    document.getElementById("you_tts").innerHTML="I fell in love with the way you touched me without using your hands.";
+    
+   document.getElementById("ttr").innerHTML="Trust love";
+   
+    document.getElementById("pdp1").style.background="url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI1bi9oywGz66V8uhkMN51qh9Wmrkw8nkWqw&usqp=CAU')";
+    
+    document.getElementById("love_page").style.background="url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmpMzUA8AZw6hHiHMxFvJXvxWUPVFFjGrXlg&usqp=CAU')";
+    
+}
+
+function friend(){
+    document.getElementById("current_l").innerHTML="Friendship";
+    
+    document.getElementById("love_page").style.width="0%"
+    
+    
+    
+    document.getElementById("you_tts").innerHTML="A true friend knows your weakness but show  your strength."
+    
+    document.getElementById("ttr").innerHTML="Best friendship";
+   
+   document.getElementById("home_page").style.width="0%"
+   
+   
+    document.getElementById("pdp1").style.background="url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1aBBE5WVo4l0ToymWMz9ar8X5S7t9UJn90A&usqp=CAU')";
+    
+    
+    
+    document.getElementById("love_page").style.background="url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdCAhgIqQ8doNGph0SYWwajqZF3kCocCGG-g&usqp=CAU')";
+    
+}
+
+function marid(){
+    document.getElementById("current_l").innerHTML="Marriage";
+    
+   document.getElementById("love_page").style.width="0%"
+   document.getElementById("you_tts").innerHTML="I am so grateful to have you in my life, you are my everything.";
+   
+    document.getElementById("ttr").innerHTML="Life partner";
+    
+    document.getElementById("home_page").style.width="0%"
+    
+document.getElementById("pdp1").style.background="url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtQGjpXtUeZShgdwP2jGlGXLk5DFRJFFqxg&usqp=CAU')";
+
+document.getElementById("love_page").style.background="url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8nc8HqZnwV9OxkjZgZQXLpLT8v-IS2P9AZg&usqp=CAU')";
+
+}
+  function callcu(){
+      
+      var abika = document.getElementById("b2").value;
+      
+     
+      
+      
+      var a = document.getElementById("yname").value;
+      
+      
+      
+       var b = document.getElementById("pname").value;
+   document.getElementById("fname").innerHTML=a;
+  
+  
+  document.getElementById("skname").innerHTML=b;
+  
+  
+  var vkcode = Math.floor(Math.random()*100);
+
+document.getElementById("nck").innerHTML=vkcode+"%";
+
+
+document.getElementById("pdp1").style.width="0%"
+document.getElementById("love_page").style.width="100%"
+
+if(abika===a)document.getElementById("nck").innerHTML="Please enter name !"
+
+
+if(abika===b)document.getElementById("nck").innerHTML="Please enter name !"
+
+
+  }
+  
+  
+  function op_menu(){
+      document.getElementById("menu_bar").style.width="250px";
+      document.getElementById("op_menu").style.display="none";
+      document.getElementById("cl_menu").style.display="block";
+  }
+  
+  
+  function cl_menu(){
+      document.getElementById("menu_bar").style.width="0%";
+      document.getElementById("op_menu").style.display="block";
+      document.getElementById("cl_menu").style.display="none";
+  }
+  
+  function back(){
+      document.getElementById("pdp1").style.width="100%";
+      
+      document.getElementById("home_page").style.width="100%";
+      
+  }
+  
+  function lovep1(){
+      document.getElementById("menu_bar").style.width="0%";
+      document.getElementById("op_menu").style.display="block";
+      document.getElementById("cl_menu").style.display="none";
+  }
+  
+  
+  function cl_mmk(){
+      document.getElementById("menu_bar").style.width="0%";
+      document.getElementById("op_menu").style.display="block";
+      document.getElementById("cl_menu").style.display="none";
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </script>
+  </body>
+  </html>
+  
